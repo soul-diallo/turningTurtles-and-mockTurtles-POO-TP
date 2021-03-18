@@ -21,7 +21,16 @@ class Row:
         for i in range(1,self.__nbrPieceRangee + 1):
             print(i, end=" ")
 
+    # Fonction retournant True si toutes les pièces de la rangée sont sur leur coté pile ou False sinon
+    def allPile(self):
+        for k in range (self.__nbrPieceRangee):
+            if self.__listCoin[1].getFace() == 1:
+                etat = True
+            else:
+                etat = False
+            return etat
 
 
-a = Row(9)
-a.affichage()
+c = Row(9)
+print(c.affichage())
+print(c.allPile())
