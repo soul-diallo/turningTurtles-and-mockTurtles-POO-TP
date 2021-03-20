@@ -28,6 +28,7 @@ class Row:
                 etat = True
             else:
                 etat = False
+            
             return etat
 
 
