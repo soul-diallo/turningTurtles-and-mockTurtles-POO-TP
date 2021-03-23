@@ -12,26 +12,26 @@ class Row:
             listCoin.append(classCoin.Coin(alea))
 
     def affichage(self):
-        for i in range(self.__nbrPieceRangee ):
+        for i in range(self.__nbrPieceRangee):
             if self.__listCoin[i].getFace() == 0:
                 print("H", end=" ")
             else:
                 print("T", end=" ")
         print("")
-        for i in range(1,self.__nbrPieceRangee + 1):
-            print(i, end=" ")
+        for j in range(1, self.__nbrPieceRangee + 1):
+            print(j, end=" ")
+        print("")
 
     # Fonction retournant True si toutes les pièces de la rangée sont sur leur coté pile ou False sinon
     def allPile(self):
-        for k in range (self.__nbrPieceRangee):
-            if self.__listCoin[1].getFace() == 1:
-                etat = True
-            else:
-                etat = False
-            
-            return etat
+        # Fonction all qui prend un iterable en tant qu'entree et renvoie <<True>> si tous les elements de cette
+        # derniere sont <<True>>. Sinon <<False>>.
+        if all(x == self.__listCoin[0] for x in self.__listCoin):
+            return True
+        else:
+            return False
 
 
 c = Row(9)
-print(c.affichage())
+c.affichage()
 print(c.allPile())
