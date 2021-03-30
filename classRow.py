@@ -11,6 +11,9 @@ class Row:
             alea = randint(0, 1)
             listCoin.append(classCoin.Coin(alea))
 
+    def getListCoin(self):
+        return self.__listCoin
+
     def affichage(self):
         for i in range(self.__nbrPieceRangee):
             if self.__listCoin[i].getFace() == 0:
@@ -31,4 +34,11 @@ class Row:
         else:
             return False
 
+
+
+
+c = Row(9)
+c.affichage()
+print(c)
+print(c.allPile())
 
