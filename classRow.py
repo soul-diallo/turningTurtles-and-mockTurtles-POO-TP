@@ -32,6 +32,3 @@ class Row:
             return False
 
 
-c = Row(9)
-c.affichage()
-print(c.allPile())
