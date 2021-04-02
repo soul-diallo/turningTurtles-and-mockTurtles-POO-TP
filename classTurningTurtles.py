@@ -23,18 +23,30 @@ class turningTurtles:
         sortie = True
         while sortie:
             num_case = int(input("Choisir une case qui a une piece cote face"))
-            if self.r.getListCoin()[num_case].getFace() == 0:
+            if self.r.getListCoin()[num_case-1].getFace() == 0:
                 sortie = False
         return num_case
 
     def firstMove(self):
         # Appel de la classe chooseHead qui va choisir une piece Face
-        case = self.chooseHead()
+        case = self.chooseHead() - 1
         # On recupere la piece correspondante a la position de case
         p = self.r.getCoin(case)
         p.turnCoin()
         self.r.affichage()
+        return case
 
+    def chooseCoin(self):
+        pass
+
+    def secondMove(self):
+        pass
+
+    def anotherMove(self):
+        pass
+
+    def gameplay(self):
+        pass
 
 c = turningTurtles(9)
 
