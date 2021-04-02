@@ -14,6 +14,9 @@ class Row:
     def getListCoin(self):
         return self.__listCoin
 
+    def getCoin(self, indice):
+        return self.__listCoin[indice]
+
     def affichage(self):
         for i in range(self.__nbrPieceRangee):
             if self.__listCoin[i].getFace() == 0:
@@ -35,10 +38,12 @@ class Row:
             return False
 
 
-
-
-c = Row(9)
-c.affichage()
-print(c)
-print(c.allPile())
+# c = Row(9)
+# c.affichage()
+# b = c.getCoin(1)
+# print(b.getFace())
+#
+# b.turnCoin()
+# print(b.getFace())
+# c.affichage()
 

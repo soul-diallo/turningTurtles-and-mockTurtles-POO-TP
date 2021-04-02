@@ -17,4 +17,5 @@ class Coin:
         return bool(self.__face)
 
     def turnCoin(self):
-        self.__face = False
+        self.__face = True
+        return self.__face

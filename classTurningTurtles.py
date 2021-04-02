@@ -7,8 +7,6 @@ class turningTurtles:
     def __init__(self, nbrPiece):
         # Liste de deux objets joueurs
         self.joueurs = []
-        # Un objet de la classe Row
-        self.r = classRow.Row(nbrPiece)
         # Nombre de pieces de la rangee
         self.__nbrPiece = nbrPiece
         for i in range(1, 3):
@@ -16,8 +14,9 @@ class turningTurtles:
             name = input()
             self.joueurs.append(classPlayer.Player(name))
 
-    def afficher(self):
-        print(self.joueurs[0].getName())
+        # Un objet de la classe Row et son affichage
+        self.r = classRow.Row(nbrPiece)
+        self.r.affichage()
 
     def chooseHead(self):
         num_case = 0
@@ -31,10 +30,12 @@ class turningTurtles:
     def firstMove(self):
         # Appel de la classe chooseHead qui va choisir une piece Face
         case = self.chooseHead()
+        # On recupere la piece correspondante a la position de case
+        p = self.r.getCoin(case)
+        p.turnCoin()
+        self.r.affichage()
 
 
+c = turningTurtles(9)
 
-
-# c = turningTurtles(9)
-# c.afficher()
-# print(c.chooseHead())
+c.firstMove()
