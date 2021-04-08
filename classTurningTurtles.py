@@ -74,7 +74,7 @@ class turningTurtles:
         :param indice:
         :return:
         """
-
+        if
 
     def gameplay(self):
         pass
