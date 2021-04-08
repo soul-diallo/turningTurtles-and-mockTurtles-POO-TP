@@ -23,7 +23,7 @@ class turningTurtles:
         sortie = True
         while sortie:
             num_case = int(input("Choisir une case qui a une piece cote face"))
-            if self.r.getListCoin()[num_case-1].getFace() == 0:
+            if self.r.getListCoin()[num_case - 1].getFace() == 0:
                 sortie = False
         return num_case
 
@@ -36,8 +36,22 @@ class turningTurtles:
         self.r.affichage()
         return case
 
-    def chooseCoin(self):
-        pass
+    def chooseCoin(self, indice):
+        """
+        Fonction qui prend en indice une case de la rangee autre que la premiere
+        Elle demande au joueur courant de saisir un numéro d'une case strictement inférieur a celui passé en parametre.
+        Tant que le numero saisi ne sera pas valide, on le fera saisir de nouveau. Finalement, la methode retournera
+        ce numero.
+        :param indice:
+        :return: ind_case
+        """
+        ind_case = 1
+        sortie = True
+        while sortie:
+            ind_case = int(input("Choisir une case a gauche"))
+            if self.r.getListCoin()[ind_case -1].getFace() < indice:
+                sortie = False
+        return ind_case
 
     def secondMove(self):
         pass
@@ -47,6 +61,7 @@ class turningTurtles:
 
     def gameplay(self):
         pass
+
 
 c = turningTurtles(9)
 
