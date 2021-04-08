@@ -60,16 +60,21 @@ class turningTurtles:
         :param indice:
         :return:
         """
-        self.chooseCoin(indice)
+        indice_case = self.chooseCoin(indice)
+        p = self.r.getCoin(indice_case)
+        p.turnCoin()
         self.r.affichage()
 
     def anotherMove(self, indice):
         """
-
+        Cette methode prend en parametre l'indice d'une case de la rangee. Si cette case n'est pas la premiere, elle
+        demande au joueur courant de saisir un entier egal à 0 ou a 1 afin d'indiquer s'il souhaite effectuer son coup
+        facultatif ou non. Tant que la saisie ne sera pas valide, elle sera recommencee. En fonction de la saisie, elle
+        appelle ou non la methode secondMove.
         :param indice:
         :return:
         """
-        pass
+
 
     def gameplay(self):
         pass
