@@ -60,7 +60,8 @@ class turningTurtles:
         :param indice:
         :return:
         """
-
+        self.chooseCoin(indice)
+        self.r.affichage()
 
     def anotherMove(self):
         pass
