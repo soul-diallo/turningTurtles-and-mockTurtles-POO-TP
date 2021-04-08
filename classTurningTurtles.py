@@ -60,12 +60,6 @@ class turningTurtles:
         :param indice:
         :return:
         """
-        ind_case = 1
-        sortie = True
-        while sortie:
-            ind_case = int(input("Choisir une case a gauche"))
-            if self.r.getListCoin()[ind_case - 1].getFace() < indice:
-                sortie = False
 
 
     def anotherMove(self):
