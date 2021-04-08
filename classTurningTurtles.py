@@ -53,8 +53,20 @@ class turningTurtles:
                 sortie = False
         return ind_case
 
-    def secondMove(self):
-        pass
+    def secondMove(self, indice):
+        """
+        Cette methode prenant en parametre l'indice d'une case de la rangee autre que la premiere. Elle appelle la
+        methode chooseCoin et met a jour la rangee de pieces.
+        :param indice:
+        :return:
+        """
+        ind_case = 1
+        sortie = True
+        while sortie:
+            ind_case = int(input("Choisir une case a gauche"))
+            if self.r.getListCoin()[ind_case - 1].getFace() < indice:
+                sortie = False
+
 
     def anotherMove(self):
         pass
