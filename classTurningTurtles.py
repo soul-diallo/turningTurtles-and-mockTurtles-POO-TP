@@ -49,7 +49,7 @@ class turningTurtles:
         sortie = True
         while sortie:
             ind_case = int(input("Choisir une case a gauche"))
-            if self.r.getListCoin()[ind_case -1].getFace() < indice:
+            if self.r.getListCoin()[ind_case - 1].getFace() < indice:
                 sortie = False
         return ind_case
 
@@ -74,7 +74,16 @@ class turningTurtles:
         :param indice:
         :return:
         """
-        if
+        choix = 0
+        if self.r.getListCoin()[indice].getFace() != 0:
+            sortie = True
+            while sortie:
+                choix = int(input("Faites vous un coup facultatif ? 0 pour NON et 1 pour OUI"))
+                if choix != 0 and 1:
+                    sortie = False
+
+        if choix == 1:
+            self.secondMove(indice)
 
     def gameplay(self):
         pass
