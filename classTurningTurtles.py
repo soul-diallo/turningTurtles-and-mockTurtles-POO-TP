@@ -63,7 +63,12 @@ class turningTurtles:
         self.chooseCoin(indice)
         self.r.affichage()
 
-    def anotherMove(self):
+    def anotherMove(self, indice):
+        """
+
+        :param indice:
+        :return:
+        """
         pass
 
     def gameplay(self):
