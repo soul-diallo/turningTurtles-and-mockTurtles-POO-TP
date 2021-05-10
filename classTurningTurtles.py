@@ -86,9 +86,17 @@ class turningTurtles:
             self.secondMove(indice)
 
     def gameplay(self):
-        pass
+        fin_game = False
+        #b = self.r.allPile()
+        while not fin_game:
+            self.firstMove()
+            b = self.r.allPile()
+
+            if b:
+                fin_game = True
+                print(fin_game)
 
 
 c = turningTurtles(9)
 
-c.firstMove()
+c.gameplay()
